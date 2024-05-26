@@ -116,20 +116,18 @@ void writeMap();
 #<input id='blank11' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(11)'> <<input id='blank12' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(12)'>> 
 <input id='blank13' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(13)'> char map[100][100]; 
  
-int readMap( char *filename ) { 
+int readMap( char *filename ) {	 
 	FILE *inFile = NULL; 
- 
 	<input id='blank14' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(14)'> ( ( inFile = fopen( filename, "rt" ) ) == NULL ) { 
 		printf( "[오류] 파일을 열 수 없습니다!" ); 
 		return -1; 
 	} 
  
-	<input id='blank15' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(15)'>( int row=0; fgets( map[row], 10, inFile ) != NULL; row++ ) { 
-		<input id='blank16' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(16)'> ( map[row][0] == '\n' ) { 
+	<input id='blank15' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(15)'>( int row=0; fgets( map[row], 100, inFile ) != NULL; row++ ) { 
+		<input id='blank16' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(16)'> ( strlen( map[row] ) < 3 ) { 
 			row--; 
 		} 
 	} 
- 
  
 	fclose( inFile ); 
 	return 0; 
@@ -140,7 +138,7 @@ void writeMap() {
 	<input id='blank17' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(17)'>( int row = 0; map[row][0] != '\0'; row++ ) { 
 		<input id='blank18' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(18)'>( int column = 0; map[row][column] != '\0'; column++ ) { 
 			<input id='blank19' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(19)'>( map[row][column] == 'W' ) 
-				printf("\033[44m  \033[0m"); 
+				printf("\033[44m   \033[0m"); 
 			<input id='blank20' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(20)'>( map[row][column] == ' ' ) 
 				printf("  "); 
 			<input id='blank21' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(21)'>( map[row][column] == 'E' ) 

@@ -95,19 +95,17 @@ WASD와 [Enter]를 입력하세요:<b><font color='red'>Q</font></b>
 
 </pre><pre id="codeF1b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('F1b')">F1b	int readMap( char *filename ) {
 </pre><pre id="code0" class="unselectable codeClass">		FILE *inFile = NULL;
-
 </pre><pre id="code0" class="unselectable codeClass">		if ( ( inFile = fopen( filename, "rt" ) ) == NULL ) {
 </pre><pre id="code0" class="unselectable codeClass">			printf( "[오류] 파일을 열 수 없습니다!" );
 </pre><pre id="code0" class="unselectable codeClass">			return -1;
 </pre><pre id="code0" class="unselectable codeClass">		}
 
-</pre><pre id="code0" class="unselectable codeClass">		for( int row=0; fgets( map[row], 10, inFile ) != NULL; row++ ) {
-</pre><pre id="code0" class="unselectable codeClass">			if ( map[row][0] == '\n' ) {
+</pre><pre id="code0" class="unselectable codeClass">		for( int row=0; fgets( map[row], 100, inFile ) != NULL; row++ ) {
+</pre><pre id="code0" class="unselectable codeClass">			if ( strlen( map[row] ) < 3 ) {
 </pre><pre id="code0" class="unselectable codeClass">				row--;
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="code0" class="unselectable codeClass">		}
 
-</pre><pre id="code0" class="unselectable codeClass">	
 </pre><pre id="code0" class="unselectable codeClass">		fclose( inFile );
 </pre><pre id="code0" class="unselectable codeClass">		return 0;
 </pre><pre id="codeF1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('F1e')">F1e	}
@@ -117,7 +115,7 @@ WASD와 [Enter]를 입력하세요:<b><font color='red'>Q</font></b>
 </pre><pre id="code0" class="unselectable codeClass">		for( int row = 0; map[row][0] != '\0'; row++ ) {
 </pre><pre id="code0" class="unselectable codeClass">			for( int column = 0; map[row][column] != '\0'; column++ ) {
 </pre><pre id="code0" class="unselectable codeClass">				if( map[row][column] == 'W' )
-</pre><pre id="code0" class="unselectable codeClass">					printf("\033[44m  \033[0m");
+</pre><pre id="code0" class="unselectable codeClass">					printf("\033[44m   \033[0m");
 </pre><pre id="code0" class="unselectable codeClass">				else if( map[row][column] == ' ' )
 </pre><pre id="code0" class="unselectable codeClass">					printf("  ");
 </pre><pre id="code0" class="unselectable codeClass">				else if( map[row][column] == 'E' )

@@ -7,8 +7,8 @@
 </pre><br><pre class='selectable'>반지름을 입력하세요 : <b><font color='red'>1</font></b>
 반지름 1.00인 원둘레는 6.28이고 원면적은 3.14입니다.
 반지름 ( 1.00 + 1.00 )인 원둘레는 12.57이고 원면적은 12.57입니다.
-</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'>프로그램시작 <br>&nbsp; &nbsp;반지름을 입력 <br>&nbsp; &nbsp;주어진 반지름으로 원둘레 및 원면적 계산 <br>&nbsp; &nbsp;&nbsp; &nbsp;원둘레 및 원면적 출력 <br>&nbsp; &nbsp;(반지름+1)으로 원둘레 및 원면적 계산 <br>&nbsp; &nbsp;&nbsp; &nbsp;원둘레 및 원면적 출력 <br>프로그램 종료 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='sP3f5();'/></h4>  				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter15/Circle.c</font>
-</pre><pre id="code0" class="unselectable codeClass">	#include &lt;stdio.h&gt;
+</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'>프로그램시작 <br>&nbsp; &nbsp;반지름을 입력 <br>&nbsp; &nbsp;먼저 반지름으로 원둘레 및 원면적 계산 <br>&nbsp; &nbsp;(반지름+1)으로 원둘레 및 원면적 계산 <br>프로그램 종료 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='sP3f5();'/></h4>  				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter15/Circle.c</font>
+</pre><pre id="code0" class="unselectable codeClass">	#<font color='red' title="헤더파일(.h) 내용을 소스코드(.c)에 포함하는 명령문">include</font> <<font color='red' title="표준입출력 관련 함수 정보를 가지고 있는 헤더파일">stdio.h</font>>
 </pre><pre id="code0" class="unselectable codeClass"> 
 </pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 매크로 상수 및 매크로 함수 정의</font>
 </pre><pre id="code0" class="unselectable codeClass">	#<font color='red' title="매크로 이름을 대체 문자열로 치환할 수 있도록 정의">define</font> PI 3.141592
@@ -30,7 +30,7 @@
 </pre>
 <pre id="code5" class="unselectable codeClass">5		scanf("%lf", &radius );
 </pre><pre id="code0" class="unselectable codeClass"> 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 주어진 반지름으로 원둘레 및 원면적 계산 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 먼저 반지름으로 원둘레 및 원면적 계산 </b></font>
 </pre>
 <pre id="code6" class="unselectable codeClass">6		circumference =
 </pre>
@@ -39,10 +39,8 @@
 <pre id="code8" class="unselectable codeClass">8		circularArea =
 </pre>
 <pre id="code9" class="unselectable codeClass">9			 	CIRCULARAREA( radius );
-</pre><pre id="code0" class="unselectable codeClass"> 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 원둘레 및 원면적 출력 </b></font>
 </pre>
-<pre id="code10" class="unselectable codeClass">10		printf("반지름 %.2f인 원둘레는 %.2f이고 원면적은 %.2f입니다.",
+<pre id="code10" class="unselectable codeClass">10		printf("반지름 %.2f인 원둘레는 %.2f이고 원면적은 %.2f입니다.\n",
 </pre><pre id="code0" class="unselectable codeClass">						radius, circumference, circularArea );
 </pre><pre id="code0" class="unselectable codeClass"> 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> (반지름+1)으로 원둘레 및 원면적 계산 </b></font>
@@ -54,8 +52,6 @@
 <pre id="code13" class="unselectable codeClass">13		circularArea =
 </pre>
 <pre id="code14" class="unselectable codeClass">14			 	CIRCULARAREA( radius + 1 );
-</pre><pre id="code0" class="unselectable codeClass"> 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 원둘레 및 원면적 출력 </b></font>
 </pre>
 <pre id="code15" class="unselectable codeClass">15		printf("반지름 ( %.2f + 1.00 )인 원둘레는 %.2f이고 원면적은 %.2f입니다.",
 </pre><pre id="code0" class="unselectable codeClass">						radius, circumference, circularArea);
