@@ -70,15 +70,15 @@ _| |_
 </pre><pre id="code0" class="unselectable codeClass">	#include &lt;string.h&gt;
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">	<a href='../Cg5i/Cg5i0.html' target='keyword'>typedef</a> <a href='../Cg5i/Cg5i0.html#2' target='keyword'>struct</a> {
-</pre><pre id="code0" class="unselectable codeClass">		int hp;
-</pre><pre id="code0" class="unselectable codeClass">		int xp;
-</pre><pre id="code0" class="unselectable codeClass">		int fl;
-</pre><pre id="code0" class="unselectable codeClass">		char image[64];
+</pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf3i/Cf3i0.html' target='keyword'>int</a> hp;
+</pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf3i/Cf3i0.html' target='keyword'>int</a> xp;
+</pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf3i/Cf3i0.html' target='keyword'>int</a> fl;
+</pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf3i/Cf3i0.html#2' target='keyword'>char</a> image[64];
 </pre><pre id="code0" class="unselectable codeClass">	} Stat;
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 캐릭터 키우기 함수 </b></font>
 </pre>
-<pre id="codeFb" class="unselectable codeClass">Fb	Stat raise( Stat character, int action ) {
+<pre id="codeFb" class="unselectable codeClass">Fb	Stat raise( Stat character, <a href='../Cf3i/Cf3i0.html' target='keyword'>int</a> action ) {
 </pre><pre id="code0" class="unselectable codeClass">		Stat stat[4] = { { 2, 1, 2, "  _\n_| |_\n(-_-)            \n(   )            \n" },
 </pre><pre id="code0" class="unselectable codeClass">	                        { 1, 3, 4, "  _\n_| |_\n(^O^) ~♩~~♪~♬~♩~\n(   )            \n",  },
 </pre><pre id="code0" class="unselectable codeClass">	                        { 4, 4, 3, "  _\n_| |_\n(O.O)  O   O     \n(   ) \\|/ \\|/    \n" },
@@ -94,8 +94,8 @@ _| |_
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 프로그램 시작 </b></font>
 </pre>
-<pre id="code1" class="unselectable codeClass">1	int main() {
-</pre><pre id="code0" class="unselectable codeClass">		int action = 1;
+<pre id="code1" class="unselectable codeClass">1	<a href='../Cf3i/Cf3i0.html' target='keyword'>int</a> main() {
+</pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf3i/Cf3i0.html' target='keyword'>int</a> action = 1;
 </pre>
 <pre id="code2" class="unselectable codeClass">2		Stat character = { 0, 0, 0, "" };
 </pre><pre id="code0" class="unselectable codeClass">	 
